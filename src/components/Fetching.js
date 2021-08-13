@@ -17,7 +17,7 @@ function Fetching(props) {
          label: "Writer",
          options: {
           filter: true,
-          sort: false,
+          sort: true,
          }
         },
         {
@@ -25,7 +25,7 @@ function Fetching(props) {
          label: "Runtime",
          options: {
           filter: true,
-          sort: false,
+          sort: true,
          }
         },
         {
@@ -33,7 +33,7 @@ function Fetching(props) {
          label: "Released",
          options: {
           filter: true,
-          sort: false,
+          sort: true
          }
         },
        ];
@@ -60,7 +60,7 @@ function Fetching(props) {
        ];
        const options = {
          filter:false,
-        //  rowsPerPageOptions:[1,2,3,4]
+         rowsPerPageOptions:[1,2,3,4]
        };
 
     return (

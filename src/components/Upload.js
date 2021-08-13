@@ -1,6 +1,7 @@
 import React , {useEffect} from 'react';
 import {useDropzone} from 'react-dropzone';
-import readXlsxFile from 'read-excel-file';
+import readXlsxFile from 'read-excel-file'
+
 function Upload(props) {
   const {
     acceptedFiles,
@@ -20,6 +21,9 @@ function Upload(props) {
     console.log("files:",acceptedFiles)
     props.setFile(acceptedFiles)
     console.log(props.file)
+    readXlsxFile(acceptedFiles).then((rows) => {
+      console.log(rows)
+    })
   }
   ,[])
 
