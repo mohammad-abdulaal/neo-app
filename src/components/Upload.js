@@ -16,17 +16,6 @@ function Upload(props) {
       {file.path} - {file.size} bytes
     </li>
   ));
-  console.log(acceptedFiles)
-  useEffect(()=>{
-    console.log("files:",acceptedFiles)
-    props.setFile(acceptedFiles)
-    console.log(props.file)
-    readXlsxFile(acceptedFiles).then((rows) => {
-      console.log(rows)
-    })
-  }
-  ,[])
-
 
   return (
     <section className="container">
